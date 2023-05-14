@@ -1,0 +1,16 @@
+MODEL PIZZERIA
+
+1 - He optat per separar les comandes a domicili de les que es serveixen a la botiga,
+perquè em sembla un model més clar, ja que són dos serveis amb requeriments diferents.
+Això implica dues taules de línies de comanda, una per a cada tipus de comanda, per a poder relacionar les 
+línies amb el número de la comanda mitjançant les claus alienes corresponents.
+
+2 - En les comandes a botiga he posat el camp de client com a no obligatori.
+
+3 - En una primera versió tenia les adreces incorporades a les taules de client i de botigues respectivament.
+Al final he optat per normalitzar el model i separar les adreces en una taula pròpia que es connecta 
+tant a clients com a botigues. 
+En el cas de les botigues, he definit que la columna de referència a l'adreça sigui Unique Index,
+perquè dues botigues no poden tenir la mateixa adreça.
+
+
